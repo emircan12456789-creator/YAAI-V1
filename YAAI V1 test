@@ -49,10 +49,10 @@ local Arrow = Instance.new("TextButton")
 local FreecamButton = Instance.new("Frame")
 local FreecamButton_2 = Instance.new("TextButton")
 local SideTab = Instance.new("ScrollingFrame")
-local UIListLayout = Instance.new("UIListLayout")
 local PlayerItemTemplate = Instance.new("Frame")
 local PlayerName = Instance.new("TextButton")
 local PlayerIcon = Instance.new("ImageLabel")
+local UIListLayout = Instance.new("UIListLayout")
 local Walkspeed_2 = Instance.new("Frame")
 local Gravity_2 = Instance.new("Frame")
 local JUMP = Instance.new("Frame")
@@ -594,18 +594,13 @@ SideTab.Position = UDim2.new(1, 0, 0.181000009, 0)
 SideTab.Size = UDim2.new(0, 196, 0, 291)
 SideTab.ScrollBarThickness = 6
 
-UIListLayout.Parent = SideTab
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 1)
-
 PlayerItemTemplate.Name = "PlayerItemTemplate"
-PlayerItemTemplate.Parent = SideTab
+PlayerItemTemplate.Parent = game.StarterGui["br1ckGUI"].MainFrame.SideTab["Name&IconHandler"]
 PlayerItemTemplate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PlayerItemTemplate.BackgroundTransparency = 1.000
 PlayerItemTemplate.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PlayerItemTemplate.BorderSizePixel = 0
 PlayerItemTemplate.Size = UDim2.new(0, 100, 0, 100)
-PlayerItemTemplate.Visible = false
 
 PlayerName.Name = "PlayerName"
 PlayerName.Parent = PlayerItemTemplate
@@ -627,6 +622,10 @@ PlayerIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PlayerIcon.BorderSizePixel = 0
 PlayerIcon.Position = UDim2.new(0.129838869, 0, 0.109999999, 0)
 PlayerIcon.Size = UDim2.new(0, 61, 0, 59)
+
+UIListLayout.Parent = SideTab
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 1)
 
 Walkspeed_2.Name = "Walkspeed"
 Walkspeed_2.Parent = MainFrame
@@ -680,7 +679,7 @@ Console.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Console.BackgroundTransparency = 1.000
 Console.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Console.BorderSizePixel = 0
-Console.Position = UDim2.new(0.449999988, 0, 0.180000007, 0)
+Console.Position = UDim2.new(0.449999988, 0, 0.180000007, 1)
 Console.Size = UDim2.new(0, 333, 0, 46)
 
 X.Name = "X"
@@ -725,7 +724,7 @@ ClickTP_2.TextSize = 29.000
 
 -- Scripts:
 
-local function FHXM_fake_script() -- ClearButton.HighlightHandler 
+local function UQRU_fake_script() -- ClearButton.HighlightHandler 
 	local script = Instance.new('LocalScript', ClearButton)
 
 	local button = script.Parent
@@ -739,8 +738,8 @@ local function FHXM_fake_script() -- ClearButton.HighlightHandler
 	end)
 	
 end
-coroutine.wrap(FHXM_fake_script)()
-local function MHUBA_fake_script() -- ClearButton.ClearHandler 
+coroutine.wrap(UQRU_fake_script)()
+local function PPBGCR_fake_script() -- ClearButton.ClearHandler 
 	local script = Instance.new('LocalScript', ClearButton)
 
 	local button = script.Parent
@@ -751,8 +750,8 @@ local function MHUBA_fake_script() -- ClearButton.ClearHandler
 	end)
 	
 end
-coroutine.wrap(MHUBA_fake_script)()
-local function EVUB_fake_script() -- knob.GravityHandler 
+coroutine.wrap(PPBGCR_fake_script)()
+local function FFQBOIU_fake_script() -- knob.GravityHandler 
 	local script = Instance.new('LocalScript', knob)
 
 	local sliderBar = script.Parent.Parent
@@ -786,8 +785,8 @@ local function EVUB_fake_script() -- knob.GravityHandler
 	end)
 	
 end
-coroutine.wrap(EVUB_fake_script)()
-local function RFVHE_fake_script() -- SpectateButton_2.SpectateHandler 
+coroutine.wrap(FFQBOIU_fake_script)()
+local function KYMKW_fake_script() -- SpectateButton_2.SpectateHandler 
 	local script = Instance.new('LocalScript', SpectateButton_2)
 
 	local Players = game:GetService("Players")
@@ -841,8 +840,8 @@ local function RFVHE_fake_script() -- SpectateButton_2.SpectateHandler
 	end)
 	
 end
-coroutine.wrap(RFVHE_fake_script)()
-local function AKGVL_fake_script() -- SpectateButton_2.LocalScript 
+coroutine.wrap(KYMKW_fake_script)()
+local function STBUH_fake_script() -- SpectateButton_2.LocalScript 
 	local script = Instance.new('LocalScript', SpectateButton_2)
 
 	local button = script.Parent
@@ -856,8 +855,8 @@ local function AKGVL_fake_script() -- SpectateButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(AKGVL_fake_script)()
-local function EVCZXNN_fake_script() -- TextButton.DragHandler 
+coroutine.wrap(STBUH_fake_script)()
+local function IHXBB_fake_script() -- TextButton.DragHandler 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -895,8 +894,8 @@ local function EVCZXNN_fake_script() -- TextButton.DragHandler
 	end)
 	
 end
-coroutine.wrap(EVCZXNN_fake_script)()
-local function EEWBCW_fake_script() -- TextButton.FlashHandler 
+coroutine.wrap(IHXBB_fake_script)()
+local function RQKMFT_fake_script() -- TextButton.FlashHandler 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local textButton = script.Parent
@@ -915,8 +914,8 @@ local function EEWBCW_fake_script() -- TextButton.FlashHandler
 	end
 	
 end
-coroutine.wrap(EEWBCW_fake_script)()
-local function FJWMG_fake_script() -- Logo.FlashHandler 
+coroutine.wrap(RQKMFT_fake_script)()
+local function JRHBC_fake_script() -- Logo.FlashHandler 
 	local script = Instance.new('LocalScript', Logo)
 
 	local logo = script.Parent
@@ -934,8 +933,8 @@ local function FJWMG_fake_script() -- Logo.FlashHandler
 	end
 	
 end
-coroutine.wrap(FJWMG_fake_script)()
-local function QUMS_fake_script() -- Logo2.FlashHandler 
+coroutine.wrap(JRHBC_fake_script)()
+local function XUNCLXR_fake_script() -- Logo2.FlashHandler 
 	local script = Instance.new('LocalScript', Logo2)
 
 	local logo = script.Parent
@@ -953,8 +952,8 @@ local function QUMS_fake_script() -- Logo2.FlashHandler
 	end
 	
 end
-coroutine.wrap(QUMS_fake_script)()
-local function DZWDGH_fake_script() -- TpButton_2.TpHandler 
+coroutine.wrap(XUNCLXR_fake_script)()
+local function ZVEGV_fake_script() -- TpButton_2.TpHandler 
 	local script = Instance.new('LocalScript', TpButton_2)
 
 	local Players = game:GetService("Players")
@@ -985,8 +984,8 @@ local function DZWDGH_fake_script() -- TpButton_2.TpHandler
 	end)
 	
 end
-coroutine.wrap(DZWDGH_fake_script)()
-local function WQPUZ_fake_script() -- TpButton_2.LocalScript 
+coroutine.wrap(ZVEGV_fake_script)()
+local function MTONURO_fake_script() -- TpButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TpButton_2)
 
 	local button = script.Parent
@@ -1000,8 +999,8 @@ local function WQPUZ_fake_script() -- TpButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(WQPUZ_fake_script)()
-local function STQGP_fake_script() -- knob_2.WalkspeedHandler 
+coroutine.wrap(MTONURO_fake_script)()
+local function KTFVY_fake_script() -- knob_2.WalkspeedHandler 
 	local script = Instance.new('LocalScript', knob_2)
 
 	local player = game.Players.LocalPlayer
@@ -1038,8 +1037,8 @@ local function STQGP_fake_script() -- knob_2.WalkspeedHandler
 	end)
 	
 end
-coroutine.wrap(STQGP_fake_script)()
-local function OXFDUL_fake_script() -- WarningLabel.LocalScript 
+coroutine.wrap(KTFVY_fake_script)()
+local function VIVMOE_fake_script() -- WarningLabel.LocalScript 
 	local script = Instance.new('LocalScript', WarningLabel)
 
 	local LogService = game:GetService("LogService")
@@ -1080,8 +1079,8 @@ local function OXFDUL_fake_script() -- WarningLabel.LocalScript
 	end)
 	
 end
-coroutine.wrap(OXFDUL_fake_script)()
-local function BGOTG_fake_script() -- NoclipButton_2.NoclipHandler 
+coroutine.wrap(VIVMOE_fake_script)()
+local function DHKMJN_fake_script() -- NoclipButton_2.NoclipHandler 
 	local script = Instance.new('LocalScript', NoclipButton_2)
 
 	local button = script.Parent
@@ -1142,8 +1141,8 @@ local function BGOTG_fake_script() -- NoclipButton_2.NoclipHandler
 	end)
 	
 end
-coroutine.wrap(BGOTG_fake_script)()
-local function HXWEJF_fake_script() -- NoclipButton_2.LocalScript 
+coroutine.wrap(DHKMJN_fake_script)()
+local function LYMCV_fake_script() -- NoclipButton_2.LocalScript 
 	local script = Instance.new('LocalScript', NoclipButton_2)
 
 	local button = script.Parent
@@ -1157,8 +1156,8 @@ local function HXWEJF_fake_script() -- NoclipButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(HXWEJF_fake_script)()
-local function DCCFE_fake_script() -- InfoButton_2.StatHandler 
+coroutine.wrap(LYMCV_fake_script)()
+local function LGDWZR_fake_script() -- InfoButton_2.StatHandler 
 	local script = Instance.new('LocalScript', InfoButton_2)
 
 	local RunService = game:GetService("RunService")
@@ -1234,8 +1233,8 @@ local function DCCFE_fake_script() -- InfoButton_2.StatHandler
 	button.Text = "Stats: OFF"
 	
 end
-coroutine.wrap(DCCFE_fake_script)()
-local function XSLM_fake_script() -- InfoButton_2.LocalScript 
+coroutine.wrap(LGDWZR_fake_script)()
+local function IZWBR_fake_script() -- InfoButton_2.LocalScript 
 	local script = Instance.new('LocalScript', InfoButton_2)
 
 	local button = script.Parent
@@ -1249,8 +1248,8 @@ local function XSLM_fake_script() -- InfoButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(XSLM_fake_script)()
-local function GKPA_fake_script() -- knob_3.JumppowerHandler 
+coroutine.wrap(IZWBR_fake_script)()
+local function YIOMQD_fake_script() -- knob_3.JumppowerHandler 
 	local script = Instance.new('LocalScript', knob_3)
 
 	local player = game.Players.LocalPlayer
@@ -1297,8 +1296,8 @@ local function GKPA_fake_script() -- knob_3.JumppowerHandler
 		end
 	end)
 end
-coroutine.wrap(GKPA_fake_script)()
-local function PQHONDL_fake_script() -- Arrow.SideTabHandling 
+coroutine.wrap(YIOMQD_fake_script)()
+local function EYPKNLJ_fake_script() -- Arrow.SideTabHandling 
 	local script = Instance.new('LocalScript', Arrow)
 
 	local TweenService = game:GetService("TweenService")
@@ -1328,32 +1327,54 @@ local function PQHONDL_fake_script() -- Arrow.SideTabHandling
 		end
 	end
 	setZIndexRecursive(sideTab, 0)
+	
 	button.MouseButton1Click:Connect(function()
 		if isOnCooldown then return end
 		isOnCooldown = true
-		isOpen = not isOpen
-		if isOpen then
+		
+		
+		if not sideTab.Visible then
 			sideTab.Visible = true
-			arrowText.Text = "<"
-			local tweenOpen = TweenService:Create(sideTab, tweenInfo, {Position = openPosition})
-			tweenOpen:Play()
 		else
-			arrowText.Text = ">"
 			local tweenClose = TweenService:Create(sideTab, tweenInfo, {Position = closedLeftPosition})
 			tweenClose:Play()
 			tweenClose.Completed:Connect(function()
-				sideTab.Visible = false
 				sideTab.Position = closedPosition
+				sideTab.Visible = false
+				tweenClose:Destroy()
+				tweenClose = nil
 			end)
 		end
+	
 		task.delay(1, function()
 			isOnCooldown = false
 		end)
 	end)
 	
+	
+	--// Visible check 
+	
+	sideTab:GetPropertyChangedSignal("Visible"):Connect(function()
+		if sideTab.Visible then
+			arrowText.Text = "<"
+			local tweenOpen = TweenService:Create(sideTab, tweenInfo, {Position = openPosition})
+			tweenOpen:Play()
+			
+			tweenOpen.Completed:Connect(function()
+				tweenOpen:Destroy()
+				tweenOpen = nil
+			end)
+			
+		else
+			arrowText.Text = ">"
+			
+		end
+	end)
+	
+	
 end
-coroutine.wrap(PQHONDL_fake_script)()
-local function HJPFD_fake_script() -- FreecamButton_2.FreecamHandler 
+coroutine.wrap(EYPKNLJ_fake_script)()
+local function EZQP_fake_script() -- FreecamButton_2.FreecamHandler 
 	local script = Instance.new('LocalScript', FreecamButton_2)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1436,8 +1457,8 @@ local function HJPFD_fake_script() -- FreecamButton_2.FreecamHandler
 	end)
 	
 end
-coroutine.wrap(HJPFD_fake_script)()
-local function WVCJ_fake_script() -- FreecamButton_2.LocalScript 
+coroutine.wrap(EZQP_fake_script)()
+local function EIIW_fake_script() -- FreecamButton_2.LocalScript 
 	local script = Instance.new('LocalScript', FreecamButton_2)
 
 	local button = script.Parent
@@ -1451,14 +1472,14 @@ local function WVCJ_fake_script() -- FreecamButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(WVCJ_fake_script)()
-local function IFHRLZW_fake_script() -- SideTab.Name&IconHandler 
+coroutine.wrap(EIIW_fake_script)()
+local function VPIHY_fake_script() -- SideTab.Name&IconHandler 
 	local script = Instance.new('LocalScript', SideTab)
 
 	local Players = game:GetService("Players")
 	local StarterGui = game:GetService("StarterGui")
 	local sideTab = script.Parent
-	local template = sideTab:WaitForChild("PlayerItemTemplate")
+	local template = script:WaitForChild("PlayerItemTemplate")
 	local function clearOldItems()
 		for _, child in ipairs(sideTab:GetChildren()) do
 			if child:IsA("Frame") and child.Name ~= "PlayerItemTemplate" then
@@ -1468,8 +1489,10 @@ local function IFHRLZW_fake_script() -- SideTab.Name&IconHandler
 	end
 	local function createPlayerItem(player)
 		local item = template:Clone()
-		item.Visible = true
+		
+		item.Parent = sideTab
 		item.Name = player.Name
+		
 		local playerNameLabel = item:FindFirstChild("PlayerName")
 		local playerIcon = item:FindFirstChild("PlayerIcon")
 		if playerNameLabel and playerIcon then
@@ -1482,9 +1505,10 @@ local function IFHRLZW_fake_script() -- SideTab.Name&IconHandler
 			playerIcon.Image = thumbUrl
 		end
 		item.Parent = sideTab
+		
 	end
-	sideTab:GetPropertyChangedSignal("Visible"):Connect(function()
-		if sideTab.Visible then
+	sideTab:GetPropertyChangedSignal("Visible"):Connect(function() 
+		if sideTab.Visible then 
 			clearOldItems()
 			for _, player in ipairs(Players:GetPlayers()) do
 				createPlayerItem(player)
@@ -1493,8 +1517,8 @@ local function IFHRLZW_fake_script() -- SideTab.Name&IconHandler
 	end)
 	
 end
-coroutine.wrap(IFHRLZW_fake_script)()
-local function VKZL_fake_script() -- PlayerName.LocalScript 
+coroutine.wrap(VPIHY_fake_script)()
+local function WAPO_fake_script() -- PlayerName.LocalScript 
 	local script = Instance.new('LocalScript', PlayerName)
 
 	local player = game.Players.LocalPlayer
@@ -1510,8 +1534,8 @@ local function VKZL_fake_script() -- PlayerName.LocalScript
 	end)
 	
 end
-coroutine.wrap(VKZL_fake_script)()
-local function BSBI_fake_script() -- ESPButton_2.ESPHandler 
+coroutine.wrap(WAPO_fake_script)()
+local function UAQSV_fake_script() -- ESPButton_2.ESPHandler 
 	local script = Instance.new('LocalScript', ESPButton_2)
 
 	local Players = game:GetService("Players")
@@ -1522,13 +1546,52 @@ local function BSBI_fake_script() -- ESPButton_2.ESPHandler
 	local gui = player:WaitForChild("PlayerGui"):WaitForChild("br1ckGUI")
 	local mainFrame = gui:WaitForChild("MainFrame")
 	local textBox = mainFrame:WaitForChild("PlayerInput")
+	
 	local enabled = false
 	local updateConnection = nil
+	local humanoids = {}
+	local highlightLimit = 30
+	local updateInterval = 0.15
 	local tagName = "br1ckESP"
+	
+	-- Cache humanoids initially
+	local function cacheHumanoids()
+		humanoids = {}
+		for _, obj in ipairs(workspace:GetDescendants()) do
+			if obj:IsA("Humanoid")
+				and obj.Parent:FindFirstChild("Head")
+				and Players:GetPlayerFromCharacter(obj.Parent) ~= player then
+				table.insert(humanoids, obj)
+			end
+		end
+	end
+	
+	-- Add humanoid when found
+	workspace.DescendantAdded:Connect(function(obj)
+		if obj:IsA("Humanoid")
+			and obj.Parent:FindFirstChild("Head")
+			and Players:GetPlayerFromCharacter(obj.Parent) ~= player then
+			table.insert(humanoids, obj)
+		end
+	end)
+	
+	-- Remove humanoid when gone
+	workspace.DescendantRemoving:Connect(function(obj)
+		if obj:IsA("Humanoid") then
+			for i, hum in ipairs(humanoids) do
+				if hum == obj then
+					table.remove(humanoids, i)
+					break
+				end
+			end
+		end
+	end)
+	
 	local function createOverheadUI(model, humanoid)
 		if humanoid:FindFirstChild("OverheadUI") then return end
 		local head = model:FindFirstChild("Head")
 		if not head then return end
+	
 		local billboard = Instance.new("BillboardGui")
 		billboard.Name = "OverheadUI"
 		billboard.Adornee = head
@@ -1536,12 +1599,13 @@ local function BSBI_fake_script() -- ESPButton_2.ESPHandler
 		billboard.StudsOffset = Vector3.new(0, 3, 0)
 		billboard.AlwaysOnTop = true
 		billboard.Parent = humanoid
+	
 		local container = Instance.new("Frame")
 		container.Size = UDim2.new(1, 0, 1, 0)
 		container.BackgroundTransparency = 1
 		container.Parent = billboard
+	
 		local nameLabel = Instance.new("TextLabel")
-		nameLabel.Name = "Name"
 		nameLabel.Size = UDim2.new(1, 0, 0.3, 0)
 		nameLabel.BackgroundTransparency = 1
 		nameLabel.TextScaled = true
@@ -1550,6 +1614,7 @@ local function BSBI_fake_script() -- ESPButton_2.ESPHandler
 		nameLabel.TextStrokeTransparency = 0.5
 		nameLabel.Text = model.Name
 		nameLabel.Parent = container
+	
 		local distLabel = Instance.new("TextLabel")
 		distLabel.Name = "Distance"
 		distLabel.Size = UDim2.new(1, 0, 0.3, 0)
@@ -1561,6 +1626,7 @@ local function BSBI_fake_script() -- ESPButton_2.ESPHandler
 		distLabel.TextStrokeTransparency = 0.5
 		distLabel.Text = "Distance: 0"
 		distLabel.Parent = container
+	
 		local hpLabel = Instance.new("TextLabel")
 		hpLabel.Name = "HP"
 		hpLabel.Size = UDim2.new(1, 0, 0.3, 0)
@@ -1572,6 +1638,7 @@ local function BSBI_fake_script() -- ESPButton_2.ESPHandler
 		hpLabel.TextStrokeTransparency = 0.5
 		hpLabel.Text = "HP: 0/0"
 		hpLabel.Parent = container
+	
 		local healthBarBG = Instance.new("Frame")
 		healthBarBG.Name = "HealthBG"
 		healthBarBG.Size = UDim2.new(1, 0, 0.1, 0)
@@ -1579,6 +1646,7 @@ local function BSBI_fake_script() -- ESPButton_2.ESPHandler
 		healthBarBG.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
 		healthBarBG.BorderSizePixel = 0
 		healthBarBG.Parent = container
+	
 		local healthBar = Instance.new("Frame")
 		healthBar.Name = "Bar"
 		healthBar.Size = UDim2.new(1, 0, 1, 0)
@@ -1586,6 +1654,7 @@ local function BSBI_fake_script() -- ESPButton_2.ESPHandler
 		healthBar.BorderSizePixel = 0
 		healthBar.Parent = healthBarBG
 	end
+	
 	local function addESP(model)
 		if not model:FindFirstChild(tagName) then
 			local highlight = Instance.new("Highlight")
@@ -1598,69 +1667,73 @@ local function BSBI_fake_script() -- ESPButton_2.ESPHandler
 			highlight.Parent = model
 		end
 	end
+	
 	local function removeAll()
-		for _, model in workspace:GetDescendants() do
-			if model:IsA("Model") and model:FindFirstChildOfClass("Humanoid") then
-				if model:FindFirstChild(tagName) then
-					model[tagName]:Destroy()
-				end
-				local humanoid = model:FindFirstChildOfClass("Humanoid")
-				if humanoid and humanoid:FindFirstChild("OverheadUI") then
-					humanoid.OverheadUI:Destroy()
-				end
+		for _, hum in ipairs(humanoids) do
+			local model = hum.Parent
+			if model:FindFirstChild(tagName) then
+				model[tagName]:Destroy()
+			end
+			if hum:FindFirstChild("OverheadUI") then
+				hum.OverheadUI:Destroy()
 			end
 		end
 	end
+	
 	local function updateOverheadUIs()
 		local targetName = textBox.Text
 		local specificPlayer = Players:FindFirstChild(targetName)
 	
-		for _, model in workspace:GetDescendants() do
-			if model:IsA("Model") and model:FindFirstChildOfClass("Humanoid") then
-				local humanoid = model:FindFirstChildOfClass("Humanoid")
-				local head = model:FindFirstChild("Head")
+		-- Sort humanoids by distance
+		table.sort(humanoids, function(a, b)
+			local ha, hb = a.Parent.Head, b.Parent.Head
+			if ha and hb then
+				local da = (ha.Position - character:GetPivot().Position).Magnitude
+				local db = (hb.Position - character:GetPivot().Position).Magnitude
+				return da < db
+			end
+			return false
+		end)
+	
+		local count = 0
+		for _, hum in ipairs(humanoids) do
+			local model = hum.Parent
+			if model and model.Parent then
 				if targetName == "" or not specificPlayer or model.Name == targetName then
-					if humanoid and head then
-						createOverheadUI(model, humanoid)
+					if count < highlightLimit then
+						createOverheadUI(model, hum)
 						addESP(model)
 	
-						local ui = humanoid:FindFirstChild("OverheadUI")
+						local ui = hum:FindFirstChild("OverheadUI")
 						if ui and ui:FindFirstChild("Frame") then
 							local frame = ui.Frame
-							local hp = math.max(humanoid.Health, 0)
-							local maxHp = humanoid.MaxHealth
+							local hp = math.max(hum.Health, 0)
+							local maxHp = hum.MaxHealth
 							local ratio = math.clamp(hp / maxHp, 0, 1)
 	
-							if frame:FindFirstChild("HP") then
-								frame.HP.Text = string.format("HP: %d/%d", hp, maxHp)
-							end
-							if frame:FindFirstChild("Distance") then
-								local dist = (head.Position - character:GetPivot().Position).Magnitude
-								frame.Distance.Text = string.format("Distance: %d studs", math.floor(dist))
-							end
-							if frame:FindFirstChild("HealthBG") and frame.HealthBG:FindFirstChild("Bar") then
-								frame.HealthBG.Bar.Size = UDim2.new(ratio, 0, 1, 0)
-								frame.HealthBG.Bar.BackgroundColor3 = Color3.fromRGB(255 * (1 - ratio), 255 * ratio, 0)
-							end
+							frame.HP.Text = string.format("HP: %d/%d", hp, maxHp)
+							local dist = (model.Head.Position - character:GetPivot().Position).Magnitude
+							frame.Distance.Text = string.format("Distance: %d studs", math.floor(dist))
+	
+							frame.HealthBG.Bar.Size = UDim2.new(ratio, 0, 1, 0)
+							frame.HealthBG.Bar.BackgroundColor3 = Color3.fromRGB(255 * (1 - ratio), 255 * ratio, 0)
 						end
-					end
-				else
-					if model:FindFirstChild(tagName) then
-						model[tagName]:Destroy()
-					end
-					if humanoid and humanoid:FindFirstChild("OverheadUI") then
-						humanoid.OverheadUI:Destroy()
+						count += 1
 					end
 				end
 			end
 		end
 	end
+	
 	button.MouseButton1Click:Connect(function()
 		enabled = not enabled
 		if enabled then
 			warn("ESP Enabled")
-			updateOverheadUIs()
-			updateConnection = RunService.RenderStepped:Connect(updateOverheadUIs)
+			cacheHumanoids()
+			updateConnection = RunService.Heartbeat:Connect(function()
+				updateOverheadUIs()
+				task.wait(updateInterval)
+			end)
 			button.Text = "ESP: ON"
 		else
 			if updateConnection then updateConnection:Disconnect() end
@@ -1671,8 +1744,8 @@ local function BSBI_fake_script() -- ESPButton_2.ESPHandler
 	end)
 	
 end
-coroutine.wrap(BSBI_fake_script)()
-local function OAFY_fake_script() -- ESPButton_2.LocalScript 
+coroutine.wrap(UAQSV_fake_script)()
+local function LJMV_fake_script() -- ESPButton_2.LocalScript 
 	local script = Instance.new('LocalScript', ESPButton_2)
 
 	local button = script.Parent
@@ -1686,8 +1759,8 @@ local function OAFY_fake_script() -- ESPButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(OAFY_fake_script)()
-local function UGIFT_fake_script() -- Close.CloseHandler 
+coroutine.wrap(LJMV_fake_script)()
+local function CEYWEPZ_fake_script() -- Close.CloseHandler 
 	local script = Instance.new('LocalScript', Close)
 
 	local closeButton = script.Parent
@@ -1695,9 +1768,10 @@ local function UGIFT_fake_script() -- Close.CloseHandler
 	local mainFrame = xFrame.Parent
 	local title = mainFrame:WaitForChild("Title")
 	local minimized = false
+	
 	local function setVisibleRecursive(guiObject, visible)
 		for _, child in pairs(guiObject:GetChildren()) do
-			if child ~= title and child ~= xFrame then
+			if child ~= title and child ~= xFrame and not (visible and child.Name == "SideTab") then
 				if child:IsA("GuiObject") then
 					child.Visible = visible
 					setVisibleRecursive(child, visible)
@@ -1705,6 +1779,8 @@ local function UGIFT_fake_script() -- Close.CloseHandler
 			end
 		end
 	end
+	
+	
 	closeButton.MouseButton1Click:Connect(function()
 		minimized = not minimized
 		if minimized then
@@ -1717,8 +1793,8 @@ local function UGIFT_fake_script() -- Close.CloseHandler
 	end)
 	
 end
-coroutine.wrap(UGIFT_fake_script)()
-local function HOLQONY_fake_script() -- Close.HighlightHandler 
+coroutine.wrap(CEYWEPZ_fake_script)()
+local function QHOH_fake_script() -- Close.HighlightHandler 
 	local script = Instance.new('LocalScript', Close)
 
 	local button = script.Parent
@@ -1731,8 +1807,8 @@ local function HOLQONY_fake_script() -- Close.HighlightHandler
 		button.BackgroundColor3 = originalColor
 	end)
 end
-coroutine.wrap(HOLQONY_fake_script)()
-local function KMMJMW_fake_script() -- ClickTP_2.ClickTPHandler 
+coroutine.wrap(QHOH_fake_script)()
+local function NUXAM_fake_script() -- ClickTP_2.ClickTPHandler 
 	local script = Instance.new('LocalScript', ClickTP_2)
 
 	local button = script.Parent
@@ -1763,8 +1839,8 @@ local function KMMJMW_fake_script() -- ClickTP_2.ClickTPHandler
 	end)
 	
 end
-coroutine.wrap(KMMJMW_fake_script)()
-local function UACXVK_fake_script() -- ClickTP_2.LocalScript 
+coroutine.wrap(NUXAM_fake_script)()
+local function OJUZPO_fake_script() -- ClickTP_2.LocalScript 
 	local script = Instance.new('LocalScript', ClickTP_2)
 
 	local button = script.Parent
@@ -1778,4 +1854,4 @@ local function UACXVK_fake_script() -- ClickTP_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(UACXVK_fake_script)()
+coroutine.wrap(OJUZPO_fake_script)()
