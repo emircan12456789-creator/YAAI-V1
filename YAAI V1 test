@@ -594,7 +594,7 @@ SideTab.Size = UDim2.new(0, 196, 0, 291)
 SideTab.ScrollBarThickness = 6
 
 PlayerItemTemplate.Name = "PlayerItemTemplate"
-PlayerItemTemplate.Parent = game.StarterGui["br1ckGUI"].MainFrame.SideTab["Name&IconHandler"]
+PlayerItemTemplate.Parent = game.StarterGui:WaitForChild("br1ckGUI").MainFrame.SideTab["Name&IconHandler"]
 PlayerItemTemplate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PlayerItemTemplate.BackgroundTransparency = 1.000
 PlayerItemTemplate.BorderColor3 = Color3.fromRGB(0, 0, 0)
