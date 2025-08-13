@@ -1,3 +1,6 @@
+-- Gui to Lua
+-- Version: 3.2
+
 -- Instances:
 
 local br1ckGUI = Instance.new("ScreenGui")
@@ -47,9 +50,6 @@ local Arrow = Instance.new("TextButton")
 local FreecamButton = Instance.new("Frame")
 local FreecamButton_2 = Instance.new("TextButton")
 local SideTab = Instance.new("ScrollingFrame")
-local PlayerItemTemplate = Instance.new("Frame")
-local PlayerName = Instance.new("TextButton")
-local PlayerIcon = Instance.new("ImageLabel")
 local UIListLayout = Instance.new("UIListLayout")
 local Walkspeed_2 = Instance.new("Frame")
 local Gravity_2 = Instance.new("Frame")
@@ -593,41 +593,6 @@ SideTab.Position = UDim2.new(1, 0, 0.181000009, 0)
 SideTab.Size = UDim2.new(0, 196, 0, 291)
 SideTab.ScrollBarThickness = 6
 
-PlayerItemTemplate.Name = "PlayerItemTemplate"
-local player = game.Players.LocalPlayer
-local playerGui = player:WaitForChild("PlayerGui")
-
-local t=os.clock() repeat task.wait() until game:IsLoaded() and os.clock()-t>=5
-
-local mainFrame = playerGui:WaitForChild("br1ckGUI"):WaitForChild("MainFrame")
-PlayerItemTemplate.Parent = playerGui:WaitForChild("br1ckGUI").MainFrame.SideTab["Name&IconHandler"]
-PlayerItemTemplate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PlayerItemTemplate.BackgroundTransparency = 1.000
-PlayerItemTemplate.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PlayerItemTemplate.BorderSizePixel = 0
-PlayerItemTemplate.Size = UDim2.new(0, 100, 0, 100)
-
-PlayerName.Name = "PlayerName"
-PlayerName.Parent = PlayerItemTemplate
-PlayerName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PlayerName.BackgroundTransparency = 1.000
-PlayerName.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PlayerName.BorderSizePixel = 0
-PlayerName.Position = UDim2.new(0.340465099, 0, 0.129999995, 0)
-PlayerName.Size = UDim2.new(0, 161, 0, 52)
-PlayerName.Font = Enum.Font.SourceSans
-PlayerName.TextColor3 = Color3.fromRGB(255, 255, 255)
-PlayerName.TextSize = 14.000
-
-PlayerIcon.Name = "PlayerIcon"
-PlayerIcon.Parent = PlayerItemTemplate
-PlayerIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PlayerIcon.BackgroundTransparency = 1.000
-PlayerIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PlayerIcon.BorderSizePixel = 0
-PlayerIcon.Position = UDim2.new(0.129838869, 0, 0.109999999, 0)
-PlayerIcon.Size = UDim2.new(0, 61, 0, 59)
-
 UIListLayout.Parent = SideTab
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout.Padding = UDim.new(0, 1)
@@ -730,7 +695,7 @@ ClickTP_2.TextSize = 29.000
 
 -- Scripts:
 
-local function SUMGEAS_fake_script() -- ClearButton.HighlightHandler 
+local function BMYPSU_fake_script() -- ClearButton.HighlightHandler 
 	local script = Instance.new('LocalScript', ClearButton)
 
 	local button = script.Parent
@@ -744,8 +709,8 @@ local function SUMGEAS_fake_script() -- ClearButton.HighlightHandler
 	end)
 	
 end
-coroutine.wrap(SUMGEAS_fake_script)()
-local function EFKJ_fake_script() -- ClearButton.ClearHandler 
+coroutine.wrap(BMYPSU_fake_script)()
+local function LLJIRF_fake_script() -- ClearButton.ClearHandler 
 	local script = Instance.new('LocalScript', ClearButton)
 
 	local button = script.Parent
@@ -756,8 +721,8 @@ local function EFKJ_fake_script() -- ClearButton.ClearHandler
 	end)
 	
 end
-coroutine.wrap(EFKJ_fake_script)()
-local function VQCUWS_fake_script() -- knob.GravityHandler 
+coroutine.wrap(LLJIRF_fake_script)()
+local function TDIH_fake_script() -- knob.GravityHandler 
 	local script = Instance.new('LocalScript', knob)
 
 	local sliderBar = script.Parent.Parent
@@ -791,8 +756,8 @@ local function VQCUWS_fake_script() -- knob.GravityHandler
 	end)
 	
 end
-coroutine.wrap(VQCUWS_fake_script)()
-local function TPBIVF_fake_script() -- SpectateButton_2.SpectateHandler 
+coroutine.wrap(TDIH_fake_script)()
+local function DSLVSQ_fake_script() -- SpectateButton_2.SpectateHandler 
 	local script = Instance.new('LocalScript', SpectateButton_2)
 
 	local Players = game:GetService("Players")
@@ -846,8 +811,8 @@ local function TPBIVF_fake_script() -- SpectateButton_2.SpectateHandler
 	end)
 	
 end
-coroutine.wrap(TPBIVF_fake_script)()
-local function ZLNWUB_fake_script() -- SpectateButton_2.LocalScript 
+coroutine.wrap(DSLVSQ_fake_script)()
+local function UPKSH_fake_script() -- SpectateButton_2.LocalScript 
 	local script = Instance.new('LocalScript', SpectateButton_2)
 
 	local button = script.Parent
@@ -861,8 +826,8 @@ local function ZLNWUB_fake_script() -- SpectateButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZLNWUB_fake_script)()
-local function BZWYOBX_fake_script() -- TextButton.DragHandler 
+coroutine.wrap(UPKSH_fake_script)()
+local function UCGAQ_fake_script() -- TextButton.DragHandler 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -900,8 +865,8 @@ local function BZWYOBX_fake_script() -- TextButton.DragHandler
 	end)
 	
 end
-coroutine.wrap(BZWYOBX_fake_script)()
-local function CQVO_fake_script() -- TextButton.FlashHandler 
+coroutine.wrap(UCGAQ_fake_script)()
+local function WNKF_fake_script() -- TextButton.FlashHandler 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local textButton = script.Parent
@@ -920,8 +885,8 @@ local function CQVO_fake_script() -- TextButton.FlashHandler
 	end
 	
 end
-coroutine.wrap(CQVO_fake_script)()
-local function JWKHA_fake_script() -- Logo.FlashHandler 
+coroutine.wrap(WNKF_fake_script)()
+local function ANNZIKG_fake_script() -- Logo.FlashHandler 
 	local script = Instance.new('LocalScript', Logo)
 
 	local logo = script.Parent
@@ -939,8 +904,8 @@ local function JWKHA_fake_script() -- Logo.FlashHandler
 	end
 	
 end
-coroutine.wrap(JWKHA_fake_script)()
-local function LEVRGH_fake_script() -- Logo2.FlashHandler 
+coroutine.wrap(ANNZIKG_fake_script)()
+local function PGHKG_fake_script() -- Logo2.FlashHandler 
 	local script = Instance.new('LocalScript', Logo2)
 
 	local logo = script.Parent
@@ -958,8 +923,8 @@ local function LEVRGH_fake_script() -- Logo2.FlashHandler
 	end
 	
 end
-coroutine.wrap(LEVRGH_fake_script)()
-local function ZQGFT_fake_script() -- TpButton_2.TpHandler 
+coroutine.wrap(PGHKG_fake_script)()
+local function YQVP_fake_script() -- TpButton_2.TpHandler 
 	local script = Instance.new('LocalScript', TpButton_2)
 
 	local Players = game:GetService("Players")
@@ -990,8 +955,8 @@ local function ZQGFT_fake_script() -- TpButton_2.TpHandler
 	end)
 	
 end
-coroutine.wrap(ZQGFT_fake_script)()
-local function ZBRX_fake_script() -- TpButton_2.LocalScript 
+coroutine.wrap(YQVP_fake_script)()
+local function OKGAI_fake_script() -- TpButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TpButton_2)
 
 	local button = script.Parent
@@ -1005,8 +970,8 @@ local function ZBRX_fake_script() -- TpButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZBRX_fake_script)()
-local function QZDI_fake_script() -- knob_2.WalkspeedHandler 
+coroutine.wrap(OKGAI_fake_script)()
+local function XXZMP_fake_script() -- knob_2.WalkspeedHandler 
 	local script = Instance.new('LocalScript', knob_2)
 
 	local player = game.Players.LocalPlayer
@@ -1043,8 +1008,8 @@ local function QZDI_fake_script() -- knob_2.WalkspeedHandler
 	end)
 	
 end
-coroutine.wrap(QZDI_fake_script)()
-local function ZRDRE_fake_script() -- WarningLabel.LocalScript 
+coroutine.wrap(XXZMP_fake_script)()
+local function JNLA_fake_script() -- WarningLabel.LocalScript 
 	local script = Instance.new('LocalScript', WarningLabel)
 
 	local LogService = game:GetService("LogService")
@@ -1085,8 +1050,8 @@ local function ZRDRE_fake_script() -- WarningLabel.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZRDRE_fake_script)()
-local function IOSRPIZ_fake_script() -- NoclipButton_2.NoclipHandler 
+coroutine.wrap(JNLA_fake_script)()
+local function EHTT_fake_script() -- NoclipButton_2.NoclipHandler 
 	local script = Instance.new('LocalScript', NoclipButton_2)
 
 	local button = script.Parent
@@ -1147,8 +1112,8 @@ local function IOSRPIZ_fake_script() -- NoclipButton_2.NoclipHandler
 	end)
 	
 end
-coroutine.wrap(IOSRPIZ_fake_script)()
-local function AUXFDX_fake_script() -- NoclipButton_2.LocalScript 
+coroutine.wrap(EHTT_fake_script)()
+local function DXUTGTP_fake_script() -- NoclipButton_2.LocalScript 
 	local script = Instance.new('LocalScript', NoclipButton_2)
 
 	local button = script.Parent
@@ -1162,8 +1127,8 @@ local function AUXFDX_fake_script() -- NoclipButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(AUXFDX_fake_script)()
-local function BCOVWZO_fake_script() -- InfoButton_2.StatHandler 
+coroutine.wrap(DXUTGTP_fake_script)()
+local function FULWI_fake_script() -- InfoButton_2.StatHandler 
 	local script = Instance.new('LocalScript', InfoButton_2)
 
 	local RunService = game:GetService("RunService")
@@ -1239,8 +1204,8 @@ local function BCOVWZO_fake_script() -- InfoButton_2.StatHandler
 	button.Text = "Stats: OFF"
 	
 end
-coroutine.wrap(BCOVWZO_fake_script)()
-local function QBNC_fake_script() -- InfoButton_2.LocalScript 
+coroutine.wrap(FULWI_fake_script)()
+local function WPMNEA_fake_script() -- InfoButton_2.LocalScript 
 	local script = Instance.new('LocalScript', InfoButton_2)
 
 	local button = script.Parent
@@ -1254,8 +1219,8 @@ local function QBNC_fake_script() -- InfoButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(QBNC_fake_script)()
-local function NDIE_fake_script() -- knob_3.JumppowerHandler 
+coroutine.wrap(WPMNEA_fake_script)()
+local function MHGGQCR_fake_script() -- knob_3.JumppowerHandler 
 	local script = Instance.new('LocalScript', knob_3)
 
 	local player = game.Players.LocalPlayer
@@ -1302,8 +1267,8 @@ local function NDIE_fake_script() -- knob_3.JumppowerHandler
 		end
 	end)
 end
-coroutine.wrap(NDIE_fake_script)()
-local function IDNWHB_fake_script() -- Arrow.SideTabHandling 
+coroutine.wrap(MHGGQCR_fake_script)()
+local function QJSSYO_fake_script() -- Arrow.SideTabHandling 
 	local script = Instance.new('LocalScript', Arrow)
 
 	local TweenService = game:GetService("TweenService")
@@ -1379,8 +1344,8 @@ local function IDNWHB_fake_script() -- Arrow.SideTabHandling
 	
 	
 end
-coroutine.wrap(IDNWHB_fake_script)()
-local function XJIZV_fake_script() -- FreecamButton_2.FreecamHandler 
+coroutine.wrap(QJSSYO_fake_script)()
+local function QEXHL_fake_script() -- FreecamButton_2.FreecamHandler 
 	local script = Instance.new('LocalScript', FreecamButton_2)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1463,8 +1428,8 @@ local function XJIZV_fake_script() -- FreecamButton_2.FreecamHandler
 	end)
 	
 end
-coroutine.wrap(XJIZV_fake_script)()
-local function OEYCKON_fake_script() -- FreecamButton_2.LocalScript 
+coroutine.wrap(QEXHL_fake_script)()
+local function AALF_fake_script() -- FreecamButton_2.LocalScript 
 	local script = Instance.new('LocalScript', FreecamButton_2)
 
 	local button = script.Parent
@@ -1478,70 +1443,8 @@ local function OEYCKON_fake_script() -- FreecamButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(OEYCKON_fake_script)()
-local function KTKR_fake_script() -- SideTab.Name&IconHandler 
-	local script = Instance.new('LocalScript', SideTab)
-
-	local Players = game:GetService("Players")
-	local StarterGui = game:GetService("StarterGui")
-	local sideTab = script.Parent
-	local template = script:WaitForChild("PlayerItemTemplate")
-	local function clearOldItems()
-		for _, child in ipairs(sideTab:GetChildren()) do
-			if child:IsA("Frame") and child.Name ~= "PlayerItemTemplate" then
-				child:Destroy()
-			end
-		end
-	end
-	local function createPlayerItem(player)
-		local item = template:Clone()
-		
-		item.Parent = sideTab
-		item.Name = player.Name
-		
-		local playerNameLabel = item:FindFirstChild("PlayerName")
-		local playerIcon = item:FindFirstChild("PlayerIcon")
-		if playerNameLabel and playerIcon then
-			playerNameLabel.Text = player.Name
-			local userId = player.UserId
-			local thumbType = Enum.ThumbnailType.HeadShot
-			local thumbSize = Enum.ThumbnailSize.Size48x48
-	
-			local thumbUrl, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
-			playerIcon.Image = thumbUrl
-		end
-		item.Parent = sideTab
-		
-	end
-	sideTab:GetPropertyChangedSignal("Visible"):Connect(function() 
-		if sideTab.Visible then 
-			clearOldItems()
-			for _, player in ipairs(Players:GetPlayers()) do
-				createPlayerItem(player)
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(KTKR_fake_script)()
-local function ESMKB_fake_script() -- PlayerName.LocalScript 
-	local script = Instance.new('LocalScript', PlayerName)
-
-	local player = game.Players.LocalPlayer
-	local playerGui = player:WaitForChild("PlayerGui")
-	local mainFrame = playerGui:WaitForChild("br1ckGUI"):WaitForChild("MainFrame")
-	local playerInputBox = mainFrame:WaitForChild("PlayerInput")
-	
-	local playerNameButton = script.Parent
-	
-	playerNameButton.MouseButton1Click:Connect(function()
-		playerInputBox.Text = playerNameButton.Text
-		warn("Player " .. playerNameButton.Text .. " selected")
-	end)
-	
-end
-coroutine.wrap(ESMKB_fake_script)()
-local function OEJUVH_fake_script() -- ESPButton_2.ESPHandler 
+coroutine.wrap(AALF_fake_script)()
+local function ZRLK_fake_script() -- ESPButton_2.ESPHandler 
 	local script = Instance.new('LocalScript', ESPButton_2)
 
 	local Players = game:GetService("Players")
@@ -1750,8 +1653,8 @@ local function OEJUVH_fake_script() -- ESPButton_2.ESPHandler
 	end)
 	
 end
-coroutine.wrap(OEJUVH_fake_script)()
-local function PKDERY_fake_script() -- ESPButton_2.LocalScript 
+coroutine.wrap(ZRLK_fake_script)()
+local function HZZU_fake_script() -- ESPButton_2.LocalScript 
 	local script = Instance.new('LocalScript', ESPButton_2)
 
 	local button = script.Parent
@@ -1765,8 +1668,8 @@ local function PKDERY_fake_script() -- ESPButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(PKDERY_fake_script)()
-local function KMZSK_fake_script() -- Close.CloseHandler 
+coroutine.wrap(HZZU_fake_script)()
+local function PFSJW_fake_script() -- Close.CloseHandler 
 	local script = Instance.new('LocalScript', Close)
 
 	local closeButton = script.Parent
@@ -1799,8 +1702,8 @@ local function KMZSK_fake_script() -- Close.CloseHandler
 	end)
 	
 end
-coroutine.wrap(KMZSK_fake_script)()
-local function CWLTTH_fake_script() -- Close.HighlightHandler 
+coroutine.wrap(PFSJW_fake_script)()
+local function NKRO_fake_script() -- Close.HighlightHandler 
 	local script = Instance.new('LocalScript', Close)
 
 	local button = script.Parent
@@ -1813,8 +1716,8 @@ local function CWLTTH_fake_script() -- Close.HighlightHandler
 		button.BackgroundColor3 = originalColor
 	end)
 end
-coroutine.wrap(CWLTTH_fake_script)()
-local function HRAXOY_fake_script() -- ClickTP_2.ClickTPHandler 
+coroutine.wrap(NKRO_fake_script)()
+local function ZHWAV_fake_script() -- ClickTP_2.ClickTPHandler 
 	local script = Instance.new('LocalScript', ClickTP_2)
 
 	local button = script.Parent
@@ -1845,8 +1748,8 @@ local function HRAXOY_fake_script() -- ClickTP_2.ClickTPHandler
 	end)
 	
 end
-coroutine.wrap(HRAXOY_fake_script)()
-local function KVFCDIW_fake_script() -- ClickTP_2.LocalScript 
+coroutine.wrap(ZHWAV_fake_script)()
+local function LMSF_fake_script() -- ClickTP_2.LocalScript 
 	local script = Instance.new('LocalScript', ClickTP_2)
 
 	local button = script.Parent
@@ -1860,4 +1763,4 @@ local function KVFCDIW_fake_script() -- ClickTP_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(KVFCDIW_fake_script)()
+coroutine.wrap(LMSF_fake_script)()
